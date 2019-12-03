@@ -1,6 +1,6 @@
 {
   "name": "redux-go",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "redux helpers",
   "main": "index.js",
   "repository": {

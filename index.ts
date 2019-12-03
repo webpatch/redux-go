@@ -36,7 +36,7 @@ export function createReducer<T>(handlers: IHandler<T>, initState: T) {
  * const changeData = createAction('changeData');
  * dispatch(changeData({user: 'tom'}));
  */
-export function createAction(type: string) {
+export function createAction(type: string): any {
   function action<T>(payload: T): IAction {
     return {
       type,
