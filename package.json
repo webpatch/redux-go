@@ -3,6 +3,9 @@
   "version": "1.0.1",
   "description": "redux helpers",
   "main": "index.js",
+  "repository": {
+    "url": "https://github.com/webpatch/redux-go"
+  },
   "scripts": {
     "build": "tsc",
     "publish": "npm publish --registry=https://registry.npmjs.org/"
