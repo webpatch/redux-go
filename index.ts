@@ -3,6 +3,10 @@ interface IAction {
   payload: any
 }
 
+interface IHandler<T> {
+  [action: string]: (state: T, action: IAction) => T
+}
+
 /**
  * @param handlers  A object with action function as key and reducer function as value.
  * @param initState Initial state object.
@@ -13,7 +17,7 @@ interface IAction {
  * },initState);
  *
  */
-export function createReducer<T>(handlers: any, initState: T) {
+export function createReducer<T>(handlers: IHandler<T>, initState: T) {
   return function reducer(state = initState, action: IAction) {
     if (handlers.hasOwnProperty(action.type)) {
       return handlers[action.type](state, action);
